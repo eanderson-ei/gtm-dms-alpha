@@ -1,0 +1,843 @@
+<!--
+  Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The Mission Data Management System facilitates a data-informed approach to development.">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.2">
+    
+    
+      
+        <title>Database Options - Mission Data Management System</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.9f9400aa.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Source Sans Pro";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+  <!-- Extra style sheets (can't be set in mkdocs.yml due to content hash) -->
+  <link
+    rel="stylesheet"
+    href="../../../assets/stylesheets/custom.css"
+  />
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#database-options" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Mission Data Management System" class="md-header__button md-logo" aria-label="Mission Data Management System" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mission Data Management System
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Database Options
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/eanderson-ei/gtm-dms-alpha" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../architecture/" class="md-tabs__link">
+        Design
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Mission Data Management System" class="md-nav__button md-logo" aria-label="Mission Data Management System" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Mission Data Management System
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/eanderson-ei/gtm-dms-alpha" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Design
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Design" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Design
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Architecture
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Architecture" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/Activity%20Data/" class="md-nav__link">
+        Activity Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/Activity%20Location%20Data/" class="md-nav__link">
+        Activity Location Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/Performance%20Measures/" class="md-nav__link">
+        Performance Measures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/Thematic%20Data/" class="md-nav__link">
+        Thematic Data
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipelines/pipelines/" class="md-nav__link">
+        Pipelines
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#relational-or-no-sql" class="md-nav__link">
+    Relational or No-SQL?
+  </a>
+  
+    <nav class="md-nav" aria-label="Relational or No-SQL?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options-for-relational-databases" class="md-nav__link">
+    Options for Relational Databases
+  </a>
+  
+    <nav class="md-nav" aria-label="Options for Relational Databases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sqlite" class="md-nav__link">
+    SQLite
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postgresql" class="md-nav__link">
+    PostgreSQL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/eanderson-ei/gtm-dms-alpha/edit/main/docs/pages/knowledge/rationale-for-data-design.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="database-options">Database Options</h1>
+<p>The Data Steward/GIS Specialist are facing increasing data storage requirements and increasingly complex analysis requests. </p>
+<p>Databases and similar concepts (e.g., data lakes and lake houses) offer a solution for both of these requirements. Data can be stored efficiently and more easily queried in a relational database or No-SQL database. A database or similar technology seems necessary to meet the long term needs of the Mission for Mission-wide analysis and maintenance of data over time.</p>
+<h2 id="relational-or-no-sql">Relational or No-SQL?</h2>
+<p>The first question is whether to use a relational database, No-SQL database, or some combination of the two. Data lakes and other less-structured approaches are beyond the scope of the current program, but may be of interest to a more sophisticated implementing partner (through the MECLA Platform, for instance).</p>
+<p>Relational databases are best for well-structured data and rapid analysis across tables. No-SQL databases are best for less-structured data. Combinations of the two are also possible.</p>
+<p>For example, activity data could all be stored in a relational database. These data are well structured because all activities share attributes  (e.g., name, geographic focus, ceiling, PM alignments).</p>
+<p>Performance monitoring data could be stored in a file-based No-SQL database. This would allow each activity to have different disaggregates for each PM (which represents less-structured data). </p>
+<p>Links between the two would be maintained in the relational database.</p>
+<h3 id="options-for-relational-databases">Options for Relational Databases</h3>
+<h4 id="sqlite">SQLite</h4>
+<p>SQLite is a lightweight, file-based database solution that is distributed with Python. This means that anyone with ArcGIS Pro (which includes Python) has access. SQLite can also be downloaded as a standalone application (you may also want SQLite Studio as a database client), however it is not in the <a href="https://usaiditsm.servicenowservices.com/sphome?id=product_list_new">Approved Product Catalog</a>.</p>
+<p>SQLite can be used from the command line with the <code>sqlite</code> command line tool. However, SQLite is best when coupled with Python using the library <code>sqlite3</code> and analysis library like <code>pandas</code> in a Jupyter Notebook or Python application.  </p>
+<p>SQLite does not have a geospatial extension (like PostGIS for PostgreSQL). Instead, most analysis will be conducted in Python using <code>geopandas</code>. The Python interpreter of ArcGIS Pro can also provide access to the database for analysis with the <code>arcpy</code> library. </p>
+<p>This solution is best for an advanced Python user with access to ArcPro.</p>
+<h4 id="postgresql">PostgreSQL</h4>
+<p>PostgreSQL is a robust, client/server style relational database management system. PostgreSQL has been approved by M/CIO and so should be available but must be requested. pgAdmin is the database client and psql is the command line tool. </p>
+<p>PostgreSQL includes PostGIS, an extension for geospatial data, bindings for Uber's H3, and JSON support, replicating some of the benefits of a file-based No-SQL database.</p>
+<p>This solution is best for an a user with database management and SQL experience. It is more scalable and deployable than SQLite. Also, it does not require a unique M/CIO review. </p>
+<h1 id="piping-data-to-the-database">Piping data to the database</h1>
+<p>The Activity Database, Thematic Database, and most Activity data will be stored in Google Drive. Each needs to be on Google Drive to either allow users to interact with it (Activity DB, Activity data) or serve to the Data Hub (Thematic Database). </p>
+<p>For the Activity Database especially, the data most be converted from a flat file to a set of related tables that can be stored in a relational database. In addition, the Activity Database includes some procurement sensitive information that we may want to exclude from the Mission Database or partition to a sensitive layer.</p>
+<p>ETL of these data into the Mission Database therefore requires a strategy for (1) reading data from Google Drive, (2) manipulating data into desired formats, and (3) reading the data in to the Mission Database. A layer of data validation may also be useful. </p>
+<p>USAID has immediate access to tools such as Python (Google Collab) and JavaScript (Google Apps Script) for these tasks, or the Data Steward could request access to additional technology like a cloud database. Below we discuss each option for ETL of Mission data into the Mission Database.</p>
+<ol>
+<li><strong>Get permission to use a cloud database.</strong> If approved, a cloud database would  be able to serve data for applications that require it (e.g, Data Hub) and allow programmatic access to use a scripting language like Python for ETL tasks. This is likely the best option for functionality but the least likely option given M/CIO attitudes towards cloud databases.</li>
+<li><strong>Use Python (Google Collab):</strong> the fatal flaw of this option is M/CIO's restriction on programmatic access to Google Drive by Google Collab. Without this access, you must download data to csv and upload each to Google Collab before processing and passing to the database. Python libraries like SQLAlchemy can support loading data into the Mission Database.</li>
+<li><strong>Use JavaScript (Google Apps Script):</strong> Google Apps Script allows easy access to data/docs on Google Drive. However, Apps Script does not have a clean interface to download data locally (it stores it back in Google Drive instead). As with Python, JavaScript could be used to create <code>.sql</code> files for defining and manipulating the database based on Google Sheets.</li>
+<li><strong>Use SQL (PL/pgSQL)</strong>: Apparently <a href="https://chiubaca.com/using-javascript-to-write-postgresql-functions-1ac/">PostgreSQL can interact with JavaScript</a> through it's PL/pgSQL language. I don't have experience with this but it could be combined with Google Apps Script to avoid an interim step of storing data locally.</li>
+<li><strong>Use Google Sheets</strong>: one or more tabs could be added to the sheet or IMPORTRANGE could be used to import data that is further manipulated in that sheet. A download link can be created to give access to any program that can read from the web (including PostgreSQL).</li>
+</ol>
+<h3 id="recommendation">Recommendation</h3>
+<p>Of the options explored above, the best option in my opinion is to use Google Apps Script given the ease with which it interacts with Google Drive. Google Sheets can also be used for some intermediate processing, especially when intermediate processing is necessary for other downstream applications (e.g. Tableau needs well-formatted data from the Activity Database). Google Apps Script provides a few options for implementation.</p>
+<ol>
+<li><strong>Custom menu:</strong> A custom menu allows the Data Steward to very easily run the script, but slows loading time for the sheet considerably and exposes the menu to external users, which may not be desired. When those drawbacks are acceptable, this is a good choice.</li>
+<li><strong>Containerized non-menu script:</strong> A script can be containerized within a Google Sheet but not exposed through a custom menu. Instead, the Data Steward would open the Apps Script editor and run the script manually. One advantage is that the script is copied anytime the Sheet is copied, which could be useful for often-replicated sheets like the Activity Data Tracker.</li>
+<li><strong>Non-containerized:</strong> A non-containerized script would only be accessible to the Data Steward. It could be deployed as a web app with additional administrative functionality. This option requires that each sheet is registered individually (which could be done in a Sheet like the Data Inventory) so the script knows where data resides. Long term, a web app could provide really useful functionality for the Data Steward.</li>
+<li><strong>Scheduled:</strong> A trigger can be set to run the script (or a function) at some regular interval. This can save the Data Steward from needing to interact with the script file to update the Mission Database, however if the solution cannot both interact with Google Drive and the database, the Data Steward will need to manually close the loop. </li>
+</ol>
+<h3 id="converting-tables-to-sql">Converting tables to SQL</h3>
+<ol>
+<li>
+<p>Google Apps Script <a href="https://developers.google.com/apps-script/reference/content/text-output">Content Service</a> can serve the .sql to the web, which can be accessed with curl to programmatically read the .sql to a local file before uploading, rather than requiring the data steward to do this manually, however, each sql file would require it's own project.)</p>
+</li>
+<li>
+<p>Would an API service on Google Apps Script work here?</p>
+</li>
+<li>
+<p>Could the Data Steward Admin dashboard have a download button rather than save the file to Google Drive?</p>
+</li>
+<li>
+<p>Use prepared PostgreSQL statements to sanitize inputs (see example in Activity Database below)</p>
+</li>
+</ol>
+<h2 id="specific-designs">Specific Designs</h2>
+<h3 id="activity-database">Activity Database</h3>
+<p>This process automates the update of the Mission Database with changes to the Activity Database on a daily basis. </p>
+<ol>
+<li>
+<p>In the Activity Database sheet, add a tab to format data for export to another Google Sheet (<code>export2gdb</code>). Copy each column individually (using named ranges when available) to avoid changing data ranges when columns are added. </p>
+</li>
+<li>
+<p>In a new Google Sheet within the MECLA Toolkit (<code>GIS/Thematic Data/internal/activity-data.ghseet</code>) use IMPORTRANGE to import the <code>export2gdb</code> sheet, wrapping with a QUERY to exclude procurement-sensitive data. Because this sheet has read permissions on the Activity Database, you must NEVER SHARE edit access outside of USAID.</p>
+</li>
+<li>
+<p>In the <code>activity-data</code> sheet, process data from the flat file to multiple tabs to third-normal form</p>
+</li>
+<li>
+<p>Use a Google Apps Script to create a <code>.sql</code> script to <code>INSERT</code> the tabs in the <code>activity-data.gsheet</code> as a <code>.sql</code> file on Google Drive. Because we will be at risk of a SQL injections, we must used <code>PREPARE</code> and <code>EXECUTE</code> to sanitize inputs. Note that prepared statement names (<code>fooplan</code>) below, must be unique across the session. (<a href="https://www.postgresql.org/docs/current/sql-prepare.html#SQL-PREPARE-EXAMPLES">docs</a>). Escape </p>
+</li>
+</ol>
+<p><code>sql
+   PREPARE fooplan (int, text, bool, numeric) AS
+       INSERT INTO foo VALUES($1, $2, $3, $4);
+   EXECUTE fooplan(1, 'Hunter Valley', 't', 200.00);</code></p>
+<ol>
+<li>Use the saved <code>.sql</code> file to read the data into the Mission Database using <code>psql</code>. Drop the original table and add the new table in its place. Curl will not work with these data unless they are published with global view access since Postgres doesn't have access to my Google Account. </li>
+</ol>
+<h3 id="thematic-data">Thematic Data</h3>
+<p>This process supports as-needed updates of thematic data in the Mission Database. We use a non-containerized script to prevent slow loading with the Data Hub and avoid exposing the script to the public (<code>thematic-data.gsheet</code> is shared publicly).</p>
+<p>The process described below describes how to <strong>add a new dataset</strong> to the thematic dataset</p>
+<ol>
+<li>Describe the new dataset in the data tab of the <code>Data Inventory-internal</code> worksheet. If the data provider is new, update the providers tab.</li>
+<li>Add dataset to a new tab in the the thematic database. Ensure that geocodes (<code>Codigo</code> and <code>Codigo1</code>) are correct and that municipalities and departments are spelled correctly. Populate all blank fields with #N/A (use find/replace if needed). </li>
+<li>Translate to English if needed and record translations in the <code>TRANSLATIONS</code> tab.</li>
+<li>Describe codes in the <code>CODES</code> tab.</li>
+<li>Add definitions to the <code>DEFINITIONS</code> tab. To allow access to the data in Map Viewer, ensure the data type attribute is set to one of the <a href="#Map-Viewer-supported-data-types">Map Viewer supported data types</a>.</li>
+<li>Use a Google Apps Script to create a <code>.sql</code> script to <code>COPY</code> the new dataset along with the <code>DEFINITIONS</code>, <code>CODES</code>, and <code>TRANSLATIONS</code> tables on Google Drive. </li>
+<li>Use the saved <code>.sql</code> file to read the data into the Mission Database using <code>psql</code>. Drop the original table and add the new table in its place.</li>
+</ol>
+<p>To <strong>update a dataset</strong></p>
+<ol>
+<li>Make required changes in the <code>thematic-data</code> worksheet. Append rows to end of a sheet to add new data or edit records directly if needed.</li>
+<li>Proceed from step 3 above. The entire table will be dropped and replaced with the new or edited data.</li>
+</ol>
+<p>To <strong>add new data from the DDL</strong></p>
+<ol>
+<li>Use the process for adding new data described above, adding the access link to the DDL in the <code>Data Inventory-internal</code> sheet.</li>
+</ol>
+<blockquote>
+<p>The <code>.sql</code> file should look like this, using <code>curl</code> to download the data. The data type (and any constraints or relationships) can be read programmatically from the DEFINITIONS tab of each spreadsheet. Additional relationships may need to be defined in another script with an ALTER TABLE command.</p>
+<p>```sql
+DROP TABLE IF EXISTS tablename;</p>
+<p>CREATE TABLE tablename (
+id PRIMARY KEY NOT NULL,
+header1 header1type,
+ header2 header2type
+);</p>
+<p>COPY tablename
+(header1, header2)
+FROM PROGRAM 'curl -L "download-link"'
+HEADERS CSV DELIMITER ',';
+```</p>
+<p>The download link for google sheets takes the form </p>
+<p><code>https://docs.google.com/spreadsheets/d/&lt;spreadsheet_id&gt;/export?format=csv&amp;gid=&lt;sheet_id&gt;</code></p>
+<p>Writing to a text file in Google Drive</p>
+<p>https://stackoverflow.com/questions/35865273/how-to-update-google-drive-text-file-via-google-script</p>
+<p>Important components</p>
+<ul>
+<li>Activity Location Data (internal)</li>
+<li>Activity Location Data (public)</li>
+<li>Thematic Data</li>
+<li>activity-data</li>
+<li>Data Steward Admin Dashboard</li>
+<li>SQL folder (or just one file that is overwritten each time? maybe archive past versions?)</li>
+<li>Folder for performance monitoring reports (as json?)</li>
+</ul>
+</blockquote>
+<h3 id="activity-location-data">Activity Location Data</h3>
+<ol>
+<li>Copy the Activity Location Data template to the Activity's Google Drive folder.</li>
+<li>Register the download link for the template in a Google Sheet (don't publish the template to the web, just use the link described above, it should only be accessible to the Data Steward)</li>
+<li>Create a scheduled Google Apps Script to compile all data from each Activity Location Data template (using the links registered in step 2) into a single Google Sheet. </li>
+<li>Create another scheduled Google Apps Script to create a <code>.sql</code> file to <code>COPY</code> new Activity Location data to the Mission Database. </li>
+<li>Use the Google Colab script (==or write in JavaScript==) to convert Activity Location Data to hex locations and transfer to Activity Location Data (public).</li>
+</ol>
+<h3 id="activity-specific-data">Activity-specific data</h3>
+<p>Activity-specific data refers to the raw performance monitoring data and other thematic datasets collected by an Implementing Partner. Not every dataset collected is worth including in the Mission Database. Many datasets will not be updated (they will only be produced once), but some may be updated quarterly (especially performance monitoring data). It is critical that the Data Steward meet with the Implementing Partner early in the award to inventory datasets, agree on data formats, and plan to ingest valuable data into the Mission Database. </p>
+<h4 id="periodically-updated-data">Periodically updated data</h4>
+<p>Activities commonly collect two core datasets:</p>
+<ul>
+<li>List of beneficiaries and their characteristics</li>
+<li>List of implementation activity locations and details</li>
+</ul>
+<p>These are clearly related to Activity Location Data, but they are often not in the format of the Activity Location Data template, so they must be re-formatted for upload to the DIS. They often drive most if not all of the performance monitoring data (number of women trained, etc.). However they are not the rolled up performance monitoring data that is also reported to the DIS. Therefore they are both but neither. </p>
+<p>Datasets like these are of interest for quarterly updating into the Mission Database. Follow this process</p>
+<ol>
+<li>Register the dataset in the Data Inventory sheet within the Activity Drive Folder. The Data Inventory sheet must include a DEFINITIONS tab that specifies</li>
+<li>short header</li>
+<li>data type</li>
+<li>constraints</li>
+<li>Register the Data Inventory sheet in the Data Steward Admin Dashboard (or you could register the entire folder and programmatically access it)</li>
+</ol>
+<p>==should we read into an interim sheet or read directly to the database?==</p>
+<ol>
+<li>Use a Google Apps Script to access each Data Inventory sheet and the datasets registered within to create a <code>.sql</code> file to update the Mission database. </li>
+</ol>
+<blockquote>
+<p>Encourage the Implementing Partner to append new records to their dataset, rather than creating multiple datasets by reporting period. Not only will this make updating the Mission Database easier, it will also force them to de-dup data rather than require you to figure out how to do that.</p>
+</blockquote>
+<h4 id="from-the-ddl">From the DDL</h4>
+<p>Many datasets will be submitted to the DDL (or should be). After submission, they can be added to the Thematic Database and the process described for those datasets should be followed. </p>
+<h3 id="performance-monitoring-reports">Performance Monitoring Reports</h3>
+<p>Performance Monitoring Reports contain the targets, baselines, and actuals for performance measures by Activity. </p>
+<p>==These are best stored as documents?==</p>
+<h4 id="spatial-data">Spatial Data</h4>
+<p>Spatial data are stored in ArcGIS Online and the <code>Spatial/</code> directory of the Thematic Database. Spatial data can be uploaded to PostgreSQL with PostGIS. Given the sporadic nature of acquiring spatial data, this can be handled manually by the Data Steward and GIS Specialist. </p>
+<ol>
+<li>Upload to ArcGIS Online</li>
+<li>Upload to PostgreSQL</li>
+</ol>
+<p>==add step by step instructions== </p>
+<h2 id="the-data-steward-admin-dashboard">The Data Steward Admin Dashboard</h2>
+<p>A single Google Apps Script project will be created to handle all data collation and writing of <code>.sql</code> files for ETL to the Mission database. The script needs to</p>
+<ul>
+<li>Create a <code>.sql</code> file to <code>COPY</code> the <code>activity-data</code> sheet to the Mission Database</li>
+<li>Create <code>.sql</code> file(s) to <code>COPY</code> new thematic datasets and <code>DEFINITIONS</code>, <code>CODES</code>, and <code>TRANSLATIONS</code> tables. An interface should be provided for the Data Steward to select the dataset to upload. </li>
+<li>Register the Activity Location Data template for each Activity</li>
+<li>Pull data from each Activity Location Data template, collate into a single Google Sheet (which will be served to the Activity Location Data Portal). This should be scheduled daily.</li>
+<li>Create a <code>.sql</code> file to <code>COPY</code> new Activity Location data to the Mission Database. </li>
+<li>Register the Data Inventory sheet for each Activity</li>
+</ul>
+<p>==How do I set the constraints such that duplicates are skipped rather than fail the entire upload?==</p>
+<h2 id="how-to-read-data-into-postgres">How to read data into Postgres</h2>
+<p>The instructions for each product above will create a <code>.sql</code> file that can be run in pgAdmin or using <code>psql</code> to update the database. Download the <code>.sql</code> file so it is accessible locally.</p>
+<p>In pgAdmin, use the <strong>Query Tool</strong> to load the file and click run.</p>
+<p>In <code>psql</code>, use the command <code>\i &lt;path to file&gt;</code> to run the file.</p>
+<h2 id="create-views">Create views</h2>
+<p>Views are calculated tables</p>
+<pre><code class="language-sql">CREATE VIEW IF NOT EXISTS view_name AS
+...
+
+</code></pre>
+<p>With statements allow you to create interim tables that simply your sql statement. Here's an example</p>
+<pre><code class="language-sql">REATE VIEW IF NOT EXISTS view_baseline AS
+WITH weighted_baseline AS (
+        SELECT d.map_unit_id,
+               d.indirect_benefits_area,
+               d.mz3,
+               d.mz4,
+               d.mz5,
+               b.season,
+               SUM(CASE WHEN b.mgmt_zone = 'MZ III' THEN d.mz3 * b.baseline END) AS mz3_weighted,
+               SUM(CASE WHEN b.mgmt_zone = 'MZ IV' THEN d.mz4 * b.baseline END) AS mz4_weighted,
+               SUM(CASE WHEN b.mgmt_zone = 'MZ V' THEN d.mz5 * b.baseline END) AS mz5_weighted
+          FROM view_desktop_results AS d
+               LEFT JOIN
+               standard_baseline AS b
+         GROUP BY d.map_unit_id,
+                  b.season
+    )
+    SELECT map_unit_id,
+           season,
+           (mz3_weighted + mz4_weighted + mz5_weighted) AS baseline
+      FROM weighted_baseline;
+</code></pre>
+<h3 id="edit-records">Edit records</h3>
+<p>Be sure to not edit records that will be overwritten on the next import. Instead, edit the data source, drop the existing table, and read in the new one. </p>
+<pre><code class="language-sql">UPDATE &lt;tablename&gt; SET &lt;field&gt; = &lt;value&gt;, &lt;field_2&gt; = &lt;value_2&gt; WHERE id = &lt;id&gt;;
+</code></pre>
+<h3 id="drop-tables-or-views">Drop tables or views</h3>
+<p>Sometimes you'll want to drop many tables or all tables in a database and start fresh with the same schema. Use <code>CASCADE</code> to remove foreign keys from related tables.</p>
+<pre><code class="language-sql">DROP TABLE IF EXISTS table_name CASCADE;
+DROP VIEW IF EXISTS view_name;
+</code></pre>
+<h2 id="map-viewer-supported-data-types">Map Viewer supported data types</h2>
+<ul>
+<li>Numeric</li>
+</ul>
+<h2 id="tables-overwritten-on-import">Tables overwritten on import</h2>
+<ul>
+<li>DEFINITIONS</li>
+<li>CODES</li>
+<li>TRANSLATIONS</li>
+<li>All tables associated with the thematic database</li>
+<li>All tables associated with Activity DB</li>
+</ul>
+<h2 id="considerations">Considerations</h2>
+<ul>
+<li>The Activity DB table will serve as the primary source of truth for Activity IDs. It is critical that these IDs do not change once they are read in to the Mission Database. The form UI for the Activity DB and restricted control of the database table in Google Sheets should ensure this.</li>
+<li>The DEFINITIONS table can store the SQL data type for each field and the relationships so the Data Steward Admin tool can efficiently create .sql files.</li>
+</ul>
+<h1 id="usaidguatemala-data-roadmap">USAID/Guatemala Data Roadmap</h1>
+<h2 id="four-pillars">Four Pillars</h2>
+<ol>
+<li>Data Infrastructure, Access, Use (Data)</li>
+<li>Technology &amp; Human Resources (People &amp; Tools)</li>
+<li>Institutional Support (Processes)</li>
+<li>Demand from Stakeholders (Culture)</li>
+</ol>
+<p>Similar to <a href="https://towardsdatascience.com/how-to-deliver-real-data-driven-insights-e94f2b386c18">this framework</a> with more emphasis on the actual data (Pillar 1).</p>
+<h2 id="rules">Rules</h2>
+<p>Tab names in Google Sheets are best if formatted in a valid way to be a Postgres table.  Any spaces or hyphens will be converted to an underscore. Any other punctuation will be removed (although rare characters can still result in an error).</p>
+<p>Column names in Google Sheets are best if formatted in a valid way to be a Postgres column. Any spaces, hyphens or forward and backward slashes will be converted to underscores. Parentheses will be removed.</p>
+<p>Column names longer than 63 characters will be truncated.</p>
+<p>Do not store units in column names, use the DEFINITIONS table.</p>
+<p>Do not start a column name with a number.</p>
+<p>Do not use a numeric format that includes a comma in the data.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "search.share", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+  
+      <script src="../../../assets/javascripts/bundle.39f04ddb.min.js"></script>
+      
+        <script src="../../../javascripts/extra.js"></script>
+      
+    
+
+  <!-- Extra JavaScript (can't be set in mkdocs.yml due to content hash) -->
+  <script src="../../../assets/javascripts/custom.js"></script>
+
+  </body>
+</html>

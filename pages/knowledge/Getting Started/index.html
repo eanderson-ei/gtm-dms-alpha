@@ -20,28 +20,6 @@
   IN THE SOFTWARE.
 -->
 
-<!--
-  Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
 
 <!doctype html>
 <html lang="en" class="no-js">
@@ -54,19 +32,19 @@
       
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.2">
     
     
       
-        <title>Home - Mission Data Management System</title>
+        <title>Getting Started - Mission Data Management System</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.9f9400aa.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.9f9400aa.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
         
       
       
@@ -83,9 +61,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -96,7 +74,7 @@
   <!-- Extra style sheets (can't be set in mkdocs.yml due to content hash) -->
   <link
     rel="stylesheet"
-    href="assets/stylesheets/custom.css"
+    href="../../../assets/stylesheets/custom.css"
   />
 
   </head>
@@ -116,6 +94,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#getting-started" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -128,7 +111,7 @@
 
 <header class="md-header md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Mission Data Management System" class="md-header__button md-logo" aria-label="Mission Data Management System" data-md-component="logo">
+    <a href="../../.." title="Mission Data Management System" class="md-header__button md-logo" aria-label="Mission Data Management System" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -147,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Getting Started
             
           </span>
         </div>
@@ -219,12 +202,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="." class="md-tabs__link md-tabs__link--active">
+    <a href="../../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -244,7 +225,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="pages/architecture/" class="md-tabs__link">
+      <a href="../../architecture/" class="md-tabs__link">
         Design
       </a>
     </li>
@@ -263,160 +244,8 @@
     <div class="md-container" data-md-component="container">
       
       
-  
         
       
-
-  <!-- Additional styles for landing page -->
-  <style>
-
-    /* Application header should be static for the landing page */
-    .md-header {
-      position: initial;
-    }
-
-    /* Remove spacing, as we cannot hide it completely */
-    .md-main__inner {
-      margin: 0;
-    }
-
-    /* Hide main content for now */
-    .md-content {
-      display: none;
-    }
-
-    /* Hide table of contents */
-    @media screen and (min-width: 60em) {
-      .md-sidebar--secondary {
-        display: none;
-      }
-    }
-
-    /* Hide navigation */
-    @media screen and (min-width: 76.25em) {
-      .md-sidebar--primary {
-        display: none;
-      }
-    }
-
-    /* Parallax */
-    body
-    {
-      overflow-x: hidden;
-      background: white;
-      min-height: 100vh;
-    }
-
-    /* #header
-    {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 30px 100px;
-      display: flex;
-      justify-content: space-betweeen;
-      align-items: center;
-    } */
-
-    .mdx-hero__image{
-      position: relative;
-      width: 100%;
-      min-height: 60vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .mdx-hero img
-    {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: coverage;
-      pointer-events: none;
-    }
-    
-  </style>
-
-  <!-- Hero for landing page -->
-  <div class="wrapper">
-    <section class="mdx-container">
-    
-      <div class="md-grid md-typeset">
-        
-        <div class="mdx-hero">
-
-         
-
-          <!-- Hero image -->
-          <div class="mdx-hero__image">
-            <img
-              id="people"
-              src="assets/9267-removebg-preview.png"
-              alt="people standing"
-              width="1200"
-              height="650"
-              draggable="false"
-            >
-            <img
-              id="map"
-              src="assets/59853-removebg-preview (3).png"
-              alt="map of the world"
-              width="1200"
-              height="650"
-              draggable="false"
-            >            
-          </div>
-          
-           <!-- Hero content -->
-           <div class="mdx-hero__content">
-            <h1>Atlas: A Mission Data Management Solution</h1>
-            <p>The Mission Data Management System facilitates a data-informed approach to development.</p>
-            <a
-              href="pages/architecture/"
-              title="Overview"
-              class="md-button md-button--primary"
-            >
-              Get Started
-            </a>
-            <a
-              href="insiders/"
-              title="Material for MkDocs Insiders"
-              class="md-button"
-            >
-              Learn More
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="content">
-    <h1>Here's a Header</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus suscipit reiciendis, quasi tenetur incidunt voluptatum qui assumenda eligendi perferendis expedita reprehenderit asperiores alias facere dolorem nemo atque. Eum, quam alias.</p>
-    <br><br>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dolore veritatis veniam deserunt possimus odit autem quo natus quam modi iste sapiente incidunt debitis voluptatum, magni at unde obcaecati! Eum.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta blanditiis consequatur ut dolore aliquam obcaecati unde, fuga mollitia, corrupti nesciunt debitis voluptatem sed necessitatibus minima qui soluta quam at nobis alias quis amet hic? Similique laudantium consectetur blanditiis cupiditate fuga temporibus consequuntur, aut alias autem sed quibusdam optio aperiam dolores, voluptas illum. Et eligendi quam aperiam, iste officiis sed veritatis ea, inventore fugit ullam voluptas quod debitis dolorum porro odio delectus! Voluptates sint ullam in amet aut iure voluptate, beatae odit rerum maiores natus blanditiis quas quos itaque voluptatum magnam quaerat laboriosam. Cum delectus, reprehenderit corporis consequatur similique vel eveniet sequi laudantium laboriosam blanditiis facilis ad veniam minus? Aliquam modi ipsa consequatur inventore quas a repudiandae cumque, ea recusandae sit corporis minus, voluptate quam dolores minima illo deleniti iste? Numquam autem magnam veniam culpa rerum, eveniet a nulla provident praesentium eos explicabo vel cupiditate sint similique magni accusantium modi aliquid consectetur excepturi? Corrupti deleniti nam dicta explicabo? Soluta, sit quas! Vero beatae repellendus nostrum, minima, amet exercitationem ratione animi quia sequi velit quaerat, libero necessitatibus et! Ipsam necessitatibus, odio, nemo dolorum eos blanditiis fugiat voluptatum alias iusto iure totam esse quidem quam ea magni similique harum aut earum minus voluptatibus maxime ad! Adipisci, in minus. Consequatur ipsum sapiente temporibus culpa tempore veritatis, cumque voluptatibus aspernatur molestias tempora possimus. Praesentium cupiditate sunt nihil nemo suscipit, porro enim repellat! Rem a dolore autem dolorum earum? Obcaecati ipsum, architecto explicabo, unde, eum vitae doloribus consectetur quos fugiat quam fugit nam ullam illum! Qui.</p>
-  </div>
-
-  <script>
-    let text = document.getElementsByClassName('mdx-hero__content')[0]
-    let people = document.getElementById('people')
-    let map = document.getElementById('map')
-
-    window.addEventListener('scroll', function(){
-      let value = window.scrollY;
-
-      people.style.top = value * -.5 + 'px'
-      map.style.top = value * -1 + 'px'
-    })
-  </script>
-
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
@@ -432,7 +261,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Mission Data Management System" class="md-nav__button md-logo" aria-label="Mission Data Management System" data-md-component="logo">
+    <a href="../../.." title="Mission Data Management System" class="md-nav__button md-logo" aria-label="Mission Data Management System" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -461,19 +290,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         Home
       </a>
-      
     </li>
   
 
@@ -538,7 +359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/architecture/" class="md-nav__link">
+      <a href="../../architecture/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -552,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/architecture/Activity%20Data/" class="md-nav__link">
+      <a href="../../architecture/Activity%20Data/" class="md-nav__link">
         Activity Data
       </a>
     </li>
@@ -566,7 +387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/architecture/Activity%20Location%20Data/" class="md-nav__link">
+      <a href="../../architecture/Activity%20Location%20Data/" class="md-nav__link">
         Activity Location Data
       </a>
     </li>
@@ -580,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/architecture/Performance%20Measures/" class="md-nav__link">
+      <a href="../../architecture/Performance%20Measures/" class="md-nav__link">
         Performance Measures
       </a>
     </li>
@@ -594,7 +415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/architecture/Thematic%20Data/" class="md-nav__link">
+      <a href="../../architecture/Thematic%20Data/" class="md-nav__link">
         Thematic Data
       </a>
     </li>
@@ -615,7 +436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/pipelines/pipelines/" class="md-nav__link">
+      <a href="../../pipelines/pipelines/" class="md-nav__link">
         Pipelines
       </a>
     </li>
@@ -646,6 +467,138 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install-postgresql" class="md-nav__link">
+    Install PostgreSQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-up-database" class="md-nav__link">
+    Set up database
+  </a>
+  
+    <nav class="md-nav" aria-label="Set up database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-database" class="md-nav__link">
+    Create database
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-extensions" class="md-nav__link">
+    Add extensions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load-tabular-data" class="md-nav__link">
+    Load tabular data
+  </a>
+  
+    <nav class="md-nav" aria-label="Load tabular data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-files-to-load-data" class="md-nav__link">
+    Create files to load data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load-data-from-files" class="md-nav__link">
+    Load data from files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load-spatial-data" class="md-nav__link">
+    Load Spatial Data
+  </a>
+  
+    <nav class="md-nav" aria-label="Load Spatial Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#load-shapefiles" class="md-nav__link">
+    Load Shapefiles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load-raster-data" class="md-nav__link">
+    Load raster data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-schema-on-dbdocsio" class="md-nav__link">
+    Update Schema on dbdocs.io
+  </a>
+  
+    <nav class="md-nav" aria-label="Update Schema on dbdocs.io">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-ddl-files" class="md-nav__link">
+    Create DDL files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upload-to-dbdocs" class="md-nav__link">
+    Upload to dbdocs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load-constraints-and-relationships" class="md-nav__link">
+    Load constraints and relationships
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -657,6 +610,129 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+                  
+
+  <a href="https://github.com/eanderson-ei/gtm-dms-alpha/edit/main/docs/pages/knowledge/Getting Started.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="getting-started">Getting Started</h1>
+<ol>
+<li>Read in Performance Measure data</li>
+<li>Create .bat file to ingest daily data (activity-data) and quarterly (activity-location-data, performance data)</li>
+<li>Use h3 extension to create VIEW of activity location data by hexagon</li>
+<li>Export VIEW to CSV (add to .bat for daily runs)</li>
+<li>Truncate and Load data in Activity Location Data (Public)</li>
+</ol>
+<h2 id="install-postgresql">Install PostgreSQL</h2>
+<ol>
+<li>Download PostgreSQL</li>
+<li>Add psql to PATH</li>
+<li>Register binaries for pgAdmin</li>
+</ol>
+<h2 id="set-up-database">Set up database</h2>
+<h3 id="create-database">Create database</h3>
+<p>Login to user <code>postgres</code>, create the database, and switch to the database. You'll know everything worked because the prompt will change to the name of the database.</p>
+<pre><code class="language-sql">psql -U postgres
+&gt;&gt;&gt;Password for user in postgres:
+CREATE DATABASE missiondb;
+\c missiondb
+&gt;&gt;&gt;missiondb =#
+</code></pre>
+<h3 id="add-extensions">Add extensions</h3>
+<p>Add the necessary extensions. Run these commands after connecting to the database.</p>
+<pre><code class="language-sql">CREATE EXTENSION postgis;
+CREATE EXTENSION postgis_raster;
+CREATE EXTENSION &quot;uuid-ossp&quot;
+CREATE EXTENSION h3
+</code></pre>
+<h2 id="load-tabular-data">Load tabular data</h2>
+<h3 id="create-files-to-load-data">Create files to load data</h3>
+<p>Using the <a href="https://script.google.com/home/projects/1WrrdjjEfdI3tT5QD1obSuMtiJRTbGZ_U3-RonWcfF4Ft_K6ZnYC0tozi/edit">Data Steward Admin Tool</a>, create the SQL files to load data from each data source.</p>
+<ul>
+<li><code>load_activity_sql</code></li>
+<li><code>load_thematic_sql</code></li>
+<li><code>load_activity_loc_sql</code></li>
+</ul>
+<p>Download the files from the <strong>Data Admin SQL</strong> folder on Google Drive and save them to the <code>sql/</code> directory in the project repository.</p>
+<h3 id="load-data-from-files">Load data from files</h3>
+<p>Connect to the database, set encoding to UTF8, and load each file.</p>
+<pre><code class="language-sql">psql -U postgres
+&gt;&gt;&gt;Password for user in postgres:
+\encoding UTF8
+\i sql/load_activity_location_data.sql
+\i sql/load_thematic_data.sql
+\i sql/load_activity_data.sql
+</code></pre>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+</div>
+<p>Google Sheets uses UTF8 encoding for CSV downloads. PostgreSQL defaults to the encoding of your system. If these two are not the same, you may experience errors on loading. Check the current encoding of the database with <code>\encoding</code>. Set the encoding for each session.</p>
+<h2 id="load-spatial-data">Load Spatial Data</h2>
+<h3 id="load-shapefiles">Load Shapefiles</h3>
+<ol>
+<li>Download the zipped shapefile from the <a href="https://drive.google.com/drive/folders/1eYl-OVbS50JuNstrMVVgfxhN6iABrhDH?lfhs=2">Spatial directory</a> in the Thematic Database.</li>
+<li>Unzip the shapefile to the <code>data/spatial</code> directory of <code>gtm-dms</code>.</li>
+<li>Use <code>shp2pgsql</code> (or the application <strong>PostGIS Bundle Shapefile and DBF Importer</strong>) to read in the shapefile.</li>
+</ol>
+<pre><code class="language-bash">shp2pgsql -c -D -s 4326 -I -W LATIN1 data/spatial/departments.shp public.departments &gt; sql/load_shp_departments.sql
+
+psql -U postgres -d missiondb -f sql/load_shp_departments.sql
+</code></pre>
+<ol>
+<li>Repeat this process for each shapefile to be read in.</li>
+</ol>
+<h3 id="load-raster-data">Load raster data</h3>
+<ol>
+<li>Download the <code>.tif</code> file from the <a href="https://drive.google.com/drive/folders/1IbBGsTxSu6fpQeSLbxVnPt-V_c_O3Uqw?lfhs=2">Spatial directory</a> in the Thematic Database.</li>
+<li>Use <code>raster2pgsql</code> (or the application <strong>PostGIS Bundle Shapefile and DBF Importer</strong>) to read in the TIFF.</li>
+</ol>
+<pre><code class="language-bash">raster2pgsql -s 4326 -I -M -C data/spatial/population_2020.tif -F public.population_2020_grid &gt; sql/load_population_2020_grid.sql
+
+psql -U postgres -d missiondb -f sql/load_population_2020_grid.sql
+</code></pre>
+<h2 id="update-schema-on-dbdocsio">Update Schema on dbdocs.io</h2>
+<h3 id="create-ddl-files">Create DDL files</h3>
+<p>Using the <a href="https://script.google.com/home/projects/1WrrdjjEfdI3tT5QD1obSuMtiJRTbGZ_U3-RonWcfF4Ft_K6ZnYC0tozi/edit">Data Steward Admin Tool</a>, create the SQL files to specify the DDL from each data source. The function is <code>write_ddl</code> for each <code>.gs</code> file.</p>
+<p>Download the files from the <strong>Data Admin SQL</strong> folder on Google Drive and save them to the <code>sql/ddl</code> directory in the project repository.</p>
+<h3 id="upload-to-dbdocs">Upload to dbdocs</h3>
+<ol>
+<li>
+<p>Go to dbdocs.io and load the create_&lt;&gt;.sql files for the schema you want to display. Make sure <code>append</code> is selected. ==use command line instead==</p>
+</li>
+<li>
+<p>Copy the contents to the <code>dbdiagram.dbml</code> file in root directory. </p>
+</li>
+<li>
+<p>Upload to dbdocs.</p>
+</li>
+</ol>
+<pre><code class="language-bash">dbdocs build dbdiagram.dbml
+</code></pre>
+<p>The link to the documentation is included in the <code>mission-database.md</code> file in <code>docs/components</code>.</p>
+<h2 id="load-constraints-and-relationships">Load constraints and relationships</h2>
+<p>==Do we need to set relationships?==</p>
+<p>Tables referenced by foreign key constraints cannot be dropped while foreign key constraints are present. The only tables that are referenced by foreign keys include</p>
+<ul>
+<li>municipalities</li>
+<li>departments</li>
+<li>activities</li>
+</ul>
+<p>We do not expect the spatial data (municipalities and departments) to change in the near future, so for now those are loaded once and foreign keys are set.</p>
+<p>The <code>activities</code> table will be updated frequently, so we use an <code>UPSERT</code> strategy to update records rather than truncate and load. Deletions from the ActivityDB will not be carried forward into the Mission Database automatically. We believe this behavior is the desired behavior. Records can be deleted manually from the Mission Database.</p>
+<p>Data from the same data source include relationships on load. Data from different data sources are related once all data are loaded.</p>
+<pre><code class="language-dbml">Ref activities_depts.codigo &gt; departments.codigo
+Ref activities_munis.codigo &gt; departments.codigo
+Ref activities_munis.codigo1 &gt; municipalities.codigo1
+</code></pre>
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -665,23 +741,36 @@
         
       </main>
       
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "search.share", "search.suggest", "search.highlight"], "search": "assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "search.share", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
   
-      <script src="assets/javascripts/bundle.39f04ddb.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.39f04ddb.min.js"></script>
       
-        <script src="javascripts/extra.js"></script>
+        <script src="../../../javascripts/extra.js"></script>
       
     
 
   <!-- Extra JavaScript (can't be set in mkdocs.yml due to content hash) -->
-  <script src="assets/javascripts/custom.js"></script>
+  <script src="../../../assets/javascripts/custom.js"></script>
 
   </body>
 </html>
